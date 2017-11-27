@@ -3,16 +3,19 @@
 	<title></title>
 </head>
 <body onload="draw()">
-<canvas id ="sketch" width="500" height="500">
+<canvas id ="sketch" width="1000" height="1000">
 </canvas>
 <script>
 function draw () {
 	//your drawing goes here 
 	var sketch = document.getElementById('sketch');
 	var context = sketch.getContext("2d");
-for (i=.5; i<5.5; i=i+1){
+var Amount = prompt(" How many Circles would you like in a row? Please don't get too crazy)");
+Num = parseInt (Amount, 10);
 
-	context.fillStyle = "#00ffff"
+for (i=.5; i<Num; i=i+1){
+
+	context.fillStyle = "#808080"
 	context.beginPath();
 	context.arc(i*100,150,30, 0, 2 * Math.PI, true);
 	context.closePath();
